@@ -27,5 +27,13 @@
     .add:before {
       background-image: url('/assets/images/add.svg');
     }
+
+    .edit:before {
+      background-image: url('/assets/images/edit.svg');
+    }
+
+    .remove:before {
+      background-image: url('/assets/images/remove.svg');
+    }
   }
 }
