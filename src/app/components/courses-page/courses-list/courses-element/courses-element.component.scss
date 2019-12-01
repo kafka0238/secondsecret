@@ -13,14 +13,34 @@
   }
 
   .course-time {
+    display: flex;
     width: 45%;
+    color: #c6c9d6;
 
     .time-spend {
-      padding-left: 50px;
+      display: flex;
+
+      &:before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        background-image: url('/assets/images/clock.svg');
+      }
     }
     .time-date {
-      padding-left: 50px;
+      display: flex;
       margin-left: 30px;
+
+      &:before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        background-image: url('/assets/images/calendar.svg');
+      }
     }
   }
 

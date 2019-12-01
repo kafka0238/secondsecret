@@ -4,35 +4,42 @@
 
   .multi-button {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 170px;
     height: 40px;
     background: #30b6dd;
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    padding: 0 20px;
+    padding: 0 25px;
     color: white;
     cursor: pointer;
 
     &:before {
       content: " ";
-      background-image: url('/assets/images/add.svg');
       display: block;
       width: 20px;
       height: 20px;
+      margin-right: 15px;
     }
+  }
 
-    .add:before {
+  .add {
+
+    &:before {
       background-image: url('/assets/images/add.svg');
     }
+  }
 
-    .edit:before {
+  .edit {
+
+    &:before {
       background-image: url('/assets/images/edit.svg');
     }
+  }
 
-    .remove:before {
+  .remove {
+
+    &:before {
       background-image: url('/assets/images/remove.svg');
     }
   }
