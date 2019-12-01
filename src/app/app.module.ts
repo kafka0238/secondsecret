@@ -8,6 +8,7 @@ import { UserComponent } from './components/header/user/user.component';
 import { InfoComponent } from './components/header/user/info/info.component';
 import { LoginComponent } from './components/header/user/login/login.component';
 import { LogoffComponent } from './components/header/user/logoff/logoff.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LogoffComponent } from './components/header/user/logoff/logoff.componen
     UserComponent,
     InfoComponent,
     LoginComponent,
-    LogoffComponent
+    LogoffComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule
