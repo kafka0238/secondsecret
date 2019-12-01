@@ -1,0 +1,13 @@
+  :host {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 50px;
+    background-color: #414452;
+    padding: 10px;
+
+    .copyright-text {
+      margin-right: 100px;
+      color: #9295a2;
+    }
+  }

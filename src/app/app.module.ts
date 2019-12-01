@@ -16,6 +16,7 @@ import { CoursesPageComponent } from './components/courses-page/courses-page.com
 import { CoursesListComponent } from './components/courses-page/courses-list/courses-list.component';
 import { CoursesElementComponent } from './components/courses-page/courses-list/courses-element/courses-element.component';
 import { ButtonComponent } from './components/util/button/button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ButtonComponent } from './components/util/button/button.component';
     CoursesPageComponent,
     CoursesListComponent,
     CoursesElementComponent,
-    ButtonComponent
+    ButtonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
