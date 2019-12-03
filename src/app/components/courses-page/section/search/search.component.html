@@ -1,6 +1,8 @@
-<form class="search-form">
-  <button class="search-input-button" type="submit"></button>
-  <input class="search-input" type="text" placeholder="Text to search...">
-  <button class="search-button" type="submit">Search</button>
-</form>
+<div class="search-form">
+  <button (click)="clickSearch()" class="search-input-button" type="submit"></button>
+  <label>
+    <input [(ngModel)]="searchText" class="search-input" type="text" placeholder="Text to search...">
+  </label>
+  <button (click)="clickSearch()" class="search-button" type="submit">Search</button>
+</div>
 

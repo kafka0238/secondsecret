@@ -17,6 +17,7 @@ import { CoursesListComponent } from './components/courses-page/courses-list/cou
 import { CoursesElementComponent } from './components/courses-page/courses-list/courses-element/courses-element.component';
 import { ButtonComponent } from './components/util/button/button.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
