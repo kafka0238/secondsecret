@@ -1,16 +1,13 @@
 <span class="course-name">
-  Hello World guide
+  {{course.title}}
 </span>
 <div class="course-time">
-<span class="time-spend">1h 28min</span><span class="time-date">28 Nov, 2019</span>
+<span class="time-spend">{{course.durationMin}} min</span><span class="time-date">{{course.creationDate.toDateString().substring(4)}}</span>
 </div>
 <div class="course-detail">
-  Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-  Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-  Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-  Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+  {{course.description}}
 </div>
 <div class="course-buttons">
-  <app-button (click)="deleteCourse(123)" [type]="'edit'" [text]="'Edit'"></app-button>
-  <app-button [type]="'remove'" [text]="'Delete'"></app-button>
+  <app-button [type]="'edit'" [text]="'Edit'"></app-button>
+  <app-button (click)="deleteCourse(course.id)" [type]="'remove'" [text]="'Delete'"></app-button>
 </div>
