@@ -17,8 +17,8 @@ import { CoursesListComponent } from './components/courses-page/courses-list/cou
 import { CoursesElementComponent } from './components/courses-page/courses-list/courses-element/courses-element.component';
 import { ButtonComponent } from './components/util/button/button.component';
 import { FooterComponent } from './components/footer/footer.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,9 +41,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ export class CoursesElementComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.logTitle(this.course.title);
+    this.logTitle('createCourseElement');
   }
 
   deleteCourse(id: number) {

@@ -1,13 +1,13 @@
 <span class="course-name">
-  {{course.title}}
+  {{course?.title}}
 </span>
 <div class="course-time">
-<span class="time-spend">{{course.durationMin}} min</span><span class="time-date">{{course.creationDate.toDateString().substring(4)}}</span>
+<span class="time-spend">{{course?.durationMin}} min</span><span class="time-date">{{course?.creationDate.toDateString().substring(4)}}</span>
 </div>
 <div class="course-detail">
-  {{course.description}}
+  {{course?.description}}
 </div>
 <div class="course-buttons">
   <app-button [type]="'edit'" [text]="'Edit'"></app-button>
-  <app-button (click)="deleteCourse(course.id)" [type]="'remove'" [text]="'Delete'"></app-button>
+  <app-button (click)="deleteCourse(course?.id)" [type]="'remove'" [text]="'Delete'"></app-button>
 </div>
