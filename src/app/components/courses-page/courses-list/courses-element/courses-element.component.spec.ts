@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoursesElementComponent } from './courses-element.component';
 import { ButtonComponent} from '../../../util/button/button.component';
 import {Course} from '../../../util/course';
+import {Test} from 'tslint';
 
 describe('CoursesElementComponent', () => {
   let component: CoursesElementComponent;
@@ -24,6 +25,23 @@ describe('CoursesElementComponent', () => {
     fixture.detectChanges();
   });
 
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        CoursesElementComponent,
+        { provide: Course, useClass: MockCourse }
+      ]
+    });
+    const comp = TestBed.get(CoursesElementComponent);
+    const course = TestBed.get(Course);
+
+    it('should not have id message after construction', () => {
+      expect(comp.course.id).toBeUndefined();
+      expect(comp.course.creationDate).toBeUndefined();
+      expect(comp.course.description).toBeUndefined();
+    });
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
@@ -39,3 +57,8 @@ describe('CoursesElementComponent', () => {
     comp.deleteCourse(course.id);
   });
 });
+
+class MockCourse {
+  title = 'Video courses title 1';
+  durationMin = 90;
+}
