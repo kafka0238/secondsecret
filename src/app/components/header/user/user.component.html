@@ -1,2 +1,9 @@
-<app-info></app-info>
-<app-logoff></app-logoff>
+<div class="user-info">
+  <span class="user-login">User login</span>
+</div>
+<div *ngIf="!isLogin" class="user-enter">
+  <span class="enter-text">Login</span>
+</div>
+<div *ngIf="isLogin" class="user-exit">
+  <span class="exit-text">Log off</span>
+</div>
