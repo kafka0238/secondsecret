@@ -11,9 +11,6 @@ import { SectionComponent } from './components/courses-page/section/section.comp
 import {CoursesListComponent} from './components/courses-page/courses-list/courses-list.component';
 import {CoursesElementComponent} from './components/courses-page/courses-list/courses-element/courses-element.component';
 import {ButtonComponent} from './components/util/button/button.component';
-import {InfoComponent} from './components/header/user/info/info.component';
-import {LogoffComponent} from './components/header/user/logoff/logoff.component';
-import {LoginComponent} from './components/header/user/login/login.component';
 import {SearchComponent} from './components/courses-page/section/search/search.component';
 import {FormsModule} from '@angular/forms';
 
@@ -36,9 +33,6 @@ describe('AppComponent', () => {
         CoursesListComponent,
         CoursesElementComponent,
         ButtonComponent,
-        InfoComponent,
-        LogoffComponent,
-        LoginComponent,
         SearchComponent
       ],
     }).compileComponents();
