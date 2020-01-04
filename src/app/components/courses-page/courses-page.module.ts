@@ -8,6 +8,7 @@ import { CoursesElementComponent } from './courses-list/courses-element/courses-
 import { UtilModule } from '../util/util.module';
 import { FormsModule } from '@angular/forms';
 import { ChangeBorderDirective } from './courses-list/change-border.directive';
+import { DurationPipe } from './courses-list/courses-element/duration.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChangeBorderDirective } from './courses-list/change-border.directive';
     CoursesPageComponent,
     CoursesListComponent,
     CoursesElementComponent,
-    ChangeBorderDirective
+    ChangeBorderDirective,
+    DurationPipe
   ],
   imports: [
     CommonModule,
