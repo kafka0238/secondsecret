@@ -1,2 +1,12 @@
-<app-courses-element *ngFor="let course of coursesArray" [course]="course" (deleteCourseEvent)="deleteCourse($event)"></app-courses-element>
-<div class="load-more">LOAD MORE</div>
+<section *ngIf="coursesArray.length">
+  <app-courses-element *ngFor="let course of coursesArray"
+                       [course]="course"
+                       [ngClass]="course.topRated ? 'top-rated': ''"
+                       appChangeBorder
+                       (deleteCourseEvent)="deleteCourse($event)">
+  </app-courses-element>
+  <div class="load-more">LOAD MORE</div>
+</section>
+<section *ngIf="!coursesArray.length">
+  <div class="no-data">NO DATA. FEEL FREE TO ADD NEW COURSE</div>
+</section>

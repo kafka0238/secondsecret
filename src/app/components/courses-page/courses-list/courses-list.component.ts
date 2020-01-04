@@ -9,15 +9,15 @@ import { Course } from '../../util/course';
 export class CoursesListComponent implements OnInit {
 
   coursesArray = [
-    new Course({id: 1, title: 'Video courses title 1', creationDate: new Date(2019, 12, 31), durationMin: 90,
+    new Course({id: 1, title: 'Video courses title 1', creationDate: new Date(2020, 0, 31), durationMin: 90,
       description: 'lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum ' +
-      'description lorem ipsum description lorem ipsum description '}),
-    new Course({id: 1, title: 'Video courses title 1', creationDate: new Date(2019, 12, 31), durationMin: 90,
+      'description lorem ipsum description lorem ipsum description ', topRated: true}),
+    new Course({id: 1, title: 'Video courses title 1', creationDate: new Date(2020, 0, 3), durationMin: 90,
       description: 'lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum ' +
-        'description lorem ipsum description lorem ipsum description '}),
-    new Course({id: 1, title: 'Video courses title 1', creationDate: new Date(2019, 12, 31), durationMin: 90,
+        'description lorem ipsum description lorem ipsum description ', topRated: false}),
+    new Course({id: 1, title: 'Video courses title 1', creationDate: new Date(2019, 11, 10), durationMin: 90,
       description: 'lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum ' +
-        'description lorem ipsum description lorem ipsum description '})
+        'description lorem ipsum description lorem ipsum description ', topRated: false})
   ];
   constructor() { }
 
