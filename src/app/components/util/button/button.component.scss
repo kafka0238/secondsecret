@@ -15,10 +15,7 @@
     cursor: pointer;
 
     &:before {
-      content: " ";
-      display: block;
-      width: 20px;
-      height: 20px;
+      font-family: IconFontFamily, sans-serif;
       margin-right: 15px;
     }
   }
@@ -26,21 +23,21 @@
   .add {
 
     &:before {
-      background-image: url('/assets/images/add.svg');
+      content: "\e906";
     }
   }
 
   .edit {
 
     &:before {
-      background-image: url('/assets/images/edit.svg');
+      content: "\e909";
     }
   }
 
   .remove {
 
     &:before {
-      background-image: url('/assets/images/remove.svg');
+      content: "\e90a";
     }
   }
 }

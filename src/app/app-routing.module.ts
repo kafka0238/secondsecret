@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoursesPageComponent } from './components/courses-page/courses-page.component';
 
 const appRoutes: Routes = [
-  { path: '', component: CoursesPageComponent }
+  { path: '', component: CoursesPageComponent },
+  { path: '*', component: CoursesPageComponent }
 ];
 
 @NgModule({

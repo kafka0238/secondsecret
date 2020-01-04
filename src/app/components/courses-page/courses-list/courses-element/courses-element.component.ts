@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Directive, EventEmitter, Host, Input, OnInit, Output} from '@angular/core';
 import {Course} from '../../../util/course';
 
 @Component({
@@ -11,7 +11,9 @@ export class CoursesElementComponent implements OnInit {
   @Output() deleteCourseEvent = new EventEmitter<number>();
   @Input() course: Course;
 
-  constructor() { }
+  constructor() {
+    console.log(this.course, 'elem');
+  }
 
   ngOnInit() {
     this.logTitle('createCourseElement');
