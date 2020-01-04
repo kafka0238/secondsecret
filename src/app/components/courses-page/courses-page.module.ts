@@ -7,6 +7,7 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CoursesElementComponent } from './courses-list/courses-element/courses-element.component';
 import { UtilModule } from '../util/util.module';
 import { FormsModule } from '@angular/forms';
+import { ChangeBorderDirective } from './courses-list/change-border.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     SearchComponent,
     CoursesPageComponent,
     CoursesListComponent,
-    CoursesElementComponent
+    CoursesElementComponent,
+    ChangeBorderDirective
   ],
   imports: [
     CommonModule,
