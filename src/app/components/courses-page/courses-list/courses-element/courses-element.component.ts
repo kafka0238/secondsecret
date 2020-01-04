@@ -12,7 +12,6 @@ export class CoursesElementComponent implements OnInit {
   @Input() course: Course;
 
   constructor() {
-    console.log(this.course, 'elem');
   }
 
   ngOnInit() {
