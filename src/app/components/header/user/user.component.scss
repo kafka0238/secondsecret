@@ -1,3 +1,52 @@
 :host {
   display: flex;
+  color: white;
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+    &:before {
+      font-family: IconFontFamily, sans-serif;
+      content: "\e905";
+      font-size: 25px;
+      margin-right: 5px;
+    }
+    .user-login {
+      line-height: 49px;
+    }
+  }
+
+  .user-enter {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+    &:before {
+      font-family: IconFontFamily, sans-serif;
+      content: "\e900";
+      font-size: 25px;
+      margin-right: 5px;
+    }
+    .enter-text {
+      line-height: 49px;
+    }
+  }
+
+  .user-exit {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+    &:before {
+      font-family: IconFontFamily, sans-serif;
+      content: "\e904";
+      font-size: 25px;
+      margin-right: 5px;
+    }
+    .exit-text {
+      line-height: 49px;
+    }
+  }
 }

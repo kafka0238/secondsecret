@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import {CoursesSearchService} from '../../courses-search.service';
 
 @Component({
   selector: 'app-search',
@@ -9,13 +10,15 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class SearchComponent implements OnInit {
   searchText: string;
 
-  constructor() { }
+  constructor(
+    private coursesSearchService: CoursesSearchService
+  ) { }
 
   ngOnInit() {
   }
 
   clickSearch() {
-    console.log(this.searchText);
+    this.coursesSearchService.setSearchText(this.searchText);
   }
 
 }
