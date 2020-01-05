@@ -8,8 +8,7 @@ import { CoursesElementComponent } from './courses-list/courses-element/courses-
 import { UtilModule } from '../util/util.module';
 import { FormsModule } from '@angular/forms';
 import { ChangeBorderDirective } from './courses-list/change-border.directive';
-import { DurationPipe } from './courses-list/courses-element/duration.pipe';
-import { SearchCoursePipe } from './courses-list/search-course.pipe';
+import {PipesModule} from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -18,14 +17,19 @@ import { SearchCoursePipe } from './courses-list/search-course.pipe';
     CoursesPageComponent,
     CoursesListComponent,
     CoursesElementComponent,
-    ChangeBorderDirective,
-    DurationPipe,
-    SearchCoursePipe
+    ChangeBorderDirective
+  ],
+  providers: [
+    ChangeBorderDirective
   ],
   imports: [
     CommonModule,
     UtilModule,
-    FormsModule
+    FormsModule,
+    PipesModule
+  ],
+  exports: [
+    ChangeBorderDirective
   ]
 })
 export class CoursesPageModule { }

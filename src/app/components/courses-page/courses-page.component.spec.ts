@@ -7,6 +7,7 @@ import {SearchComponent} from './section/search/search.component';
 import {ButtonComponent} from '../util/button/button.component';
 import {CoursesElementComponent} from './courses-list/courses-element/courses-element.component';
 import {FormsModule} from '@angular/forms';
+import {PipesModule} from '../../pipes/pipes.module';
 
 describe('CoursesPageComponent', () => {
   let component: CoursesPageComponent;
@@ -23,7 +24,8 @@ describe('CoursesPageComponent', () => {
         CoursesElementComponent
       ],
       imports: [
-        FormsModule
+        FormsModule,
+        PipesModule
       ]
     })
     .compileComponents();

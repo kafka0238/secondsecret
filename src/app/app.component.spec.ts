@@ -13,13 +13,15 @@ import {CoursesElementComponent} from './components/courses-page/courses-list/co
 import {ButtonComponent} from './components/util/button/button.component';
 import {SearchComponent} from './components/courses-page/section/search/search.component';
 import {FormsModule} from '@angular/forms';
+import {PipesModule} from './pipes/pipes.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        PipesModule
       ],
       declarations: [
         AppComponent,
