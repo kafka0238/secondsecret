@@ -16,7 +16,6 @@ export class ChangeBorderDirective implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.course);
     this.isFreshCourse = this.checkCourseFresh();
     this.isUpComingCourse = this.checkCourseUpComing();
     if (this.isFreshCourse) {
@@ -34,8 +33,6 @@ export class ChangeBorderDirective implements OnInit {
 
   checkCourseUpComing(): boolean {
     const currentDate = new Date();
-    console.log(currentDate);
-    console.log(this.course.creationDate > currentDate);
     return this.course.creationDate > currentDate;
   }
 

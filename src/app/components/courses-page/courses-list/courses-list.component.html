@@ -1,5 +1,5 @@
 <section *ngIf="coursesArray.length">
-  <app-courses-element *ngFor="let course of coursesArray"
+  <app-courses-element *ngFor="let course of ( coursesArray | searchCourse : coursesSearchService.searchText )"
                        [course]="course"
                        [ngClass]="course.topRated ? 'top-rated': ''"
                        appChangeBorder
