@@ -5,6 +5,8 @@ import { Course } from '../../util/course';
   selector: '[appChangeBorder]'
 })
 export class ChangeBorderDirective implements OnInit {
+  FRESH_COURSE = 'courses-list__course--fresh';
+  UP_COMING_COURSE = 'courses-list__course--upcoming';
 
   @Input() course: Course;
   isFreshCourse: boolean;
@@ -19,9 +21,9 @@ export class ChangeBorderDirective implements OnInit {
     this.isFreshCourse = this.checkCourseFresh();
     this.isUpComingCourse = this.checkCourseUpComing();
     if (this.isFreshCourse) {
-      this.el.nativeElement.style.boxShadow = '0 0 10px green';
+      this.el.nativeElement.classList.add(this.FRESH_COURSE);
     } else if (this.isUpComingCourse) {
-      this.el.nativeElement.style.boxShadow = '0 0 10px blue';
+      this.el.nativeElement.classList.add(this.UP_COMING_COURSE);
     }
   }
 

@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Course } from '../../util/course';
 import { CoursesSearchService } from '../courses-search.service';
 import {CoursesListService} from './courses-list.service';
+import { SearchCoursePipe } from '../../../pipes/search-course.pipe';
 
 @Component({
   selector: 'app-courses-list',
@@ -11,14 +12,19 @@ import {CoursesListService} from './courses-list.service';
 export class CoursesListComponent implements OnInit {
 
   coursesArray: Course[];
+  searchText: string;
+  searchCoursePipe: SearchCoursePipe;
 
   constructor(
     private coursesSearchService: CoursesSearchService,
-    private coursesListService: CoursesListService
-  ) { }
+    private coursesListService: CoursesListService,
+  ) {
+    this.searchCoursePipe = new SearchCoursePipe();
+  }
 
   ngOnInit() {
-    this.coursesArray = this.coursesListService.getList();
+    this.searchText = this.coursesSearchService.searchText;
+    this.coursesArray = this.searchCoursePipe.transform(this.coursesListService.getList(), this.searchText);
   }
 
   deleteCourse(id: number) {
