@@ -8,7 +8,7 @@ import { CoursesElementComponent } from './courses-list/courses-element/courses-
 import { UtilModule } from '../util/util.module';
 import { FormsModule } from '@angular/forms';
 import { ChangeBorderDirective } from './courses-list/change-border.directive';
-import {PipesModule} from '../../pipes/pipes.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [

@@ -5,5 +5,5 @@
   <span class="enter-text">Login</span>
 </div>
 <div *ngIf="isLogin" class="user-exit">
-  <span class="exit-text">Log off</span>
+  <span (click)="logout()" class="exit-text">Log off</span>
 </div>
