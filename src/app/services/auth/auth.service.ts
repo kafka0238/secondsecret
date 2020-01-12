@@ -7,9 +7,9 @@ export class AuthService {
 
   constructor() { }
 
-  login(login: string, password: string) {
-    localStorage.setItem('auth', login + password);
-    localStorage.setItem('login', login);
+  login(user: {login: string, password: string}) {
+    localStorage.setItem('auth', user.login + user.password);
+    localStorage.setItem('login', user.login);
   }
 
   logout() {
