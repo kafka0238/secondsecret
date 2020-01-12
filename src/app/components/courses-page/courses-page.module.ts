@@ -9,6 +9,7 @@ import { UtilModule } from '../util/util.module';
 import { FormsModule } from '@angular/forms';
 import { ChangeBorderDirective } from './courses-list/change-border.directive';
 import { PipesModule } from '../../pipes/pipes.module';
+import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PipesModule } from '../../pipes/pipes.module';
     CoursesPageComponent,
     CoursesListComponent,
     CoursesElementComponent,
-    ChangeBorderDirective
+    ChangeBorderDirective,
+    BreadcrumbsComponent
   ],
   providers: [
     ChangeBorderDirective
