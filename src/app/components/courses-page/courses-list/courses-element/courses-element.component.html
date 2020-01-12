@@ -1,8 +1,9 @@
 <span class="course-name">
-  {{course?.title}}
+  {{ course?.title | uppercase }}
 </span>
 <div class="course-time">
-<span class="time-spend">{{course?.durationMin}} min</span><span class="time-date">{{course?.creationDate.toDateString().substring(4)}}</span>
+  <span class="time-spend">{{ course?.durationMin | duration }}</span>
+  <span class="time-date">{{course?.creationDate | date:'MMM dd yyyy'}}</span>
 </div>
 <div class="course-detail">
   {{course?.description}}

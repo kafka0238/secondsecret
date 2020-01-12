@@ -3,9 +3,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
   background: white;
-  box-shadow:  0 0 10px rgba(0,0,0,0.5);
+  box-shadow:  0 0 10px rgba(0,0,0,0.25);
   margin: 40px 10px;
   padding: 40px;
+
+  &.top-rated {
+    background-color: #eac5001c;
+
+    .course-name {
+      &:after {
+        font-family: IconFontFamily, sans-serif;
+        content: "\e901";
+        margin-left: 10px;
+        color: #ffbf63;
+      }
+    }
+  }
 
   .course-name {
     width: 45%;
@@ -22,12 +35,9 @@
       display: flex;
 
       &:before {
-        content: " ";
-        display: block;
-        width: 20px;
-        height: 20px;
+        font-family: IconFontFamily, sans-serif;
+        content: "\e908";
         margin-right: 10px;
-        background-image: url('/assets/images/clock.svg');
       }
     }
     .time-date {
@@ -35,12 +45,9 @@
       margin-left: 30px;
 
       &:before {
-        content: " ";
-        display: block;
-        width: 20px;
-        height: 20px;
+        font-family: IconFontFamily, sans-serif;
+        content: "\e907";
         margin-right: 10px;
-        background-image: url('/assets/images/calendar.svg');
       }
     }
   }

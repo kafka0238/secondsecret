@@ -14,13 +14,15 @@ export class Course implements CourseInterface {
   creationDate: Date;
   durationMin: number;
   description: string;
+  topRated: boolean;
 
-  constructor(id: number, title: string, creationDate: Date, durationMin: number, description: string) {
-    this.id = id;
-    this.title = title;
-    this.creationDate = creationDate;
-    this.durationMin = durationMin;
-    this.description = description;
+  constructor(course: Course) {
+    this.id = course.id;
+    this.title = course.title;
+    this.creationDate = course.creationDate;
+    this.durationMin = course.durationMin;
+    this.description = course.description;
+    this.topRated = course.topRated;
   }
 
 }

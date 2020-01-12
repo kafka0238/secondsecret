@@ -1,5 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Course } from '../../util/course';
+import { CoursesSearchService } from '../courses-search.service';
+import {CoursesListService} from './courses-list.service';
+import { SearchCoursePipe } from '../../../pipes/search-course.pipe';
 
 @Component({
   selector: 'app-courses-list',
@@ -8,24 +11,26 @@ import { Course } from '../../util/course';
 })
 export class CoursesListComponent implements OnInit {
 
-  coursesArray = [
-    new Course(1, 'Video courses title 1', new Date(2019, 12, 31), 90,
-      'lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum ' +
-      'description lorem ipsum description lorem ipsum description '),
-    new Course(1, 'Video courses title 2', new Date(2019, 12, 31), 90,
-      'lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum ' +
-      'description lorem ipsum description lorem ipsum description '),
-    new Course(1, 'Video courses title 3', new Date(2019, 12, 31), 90,
-      'lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum ' +
-      'description lorem ipsum description lorem ipsum description ')
-  ];
-  constructor() { }
+  coursesArray: Course[];
+  searchText: string;
+  searchCoursePipe: SearchCoursePipe;
+
+  constructor(
+    private coursesSearchService: CoursesSearchService,
+    private coursesListService: CoursesListService,
+  ) {
+    this.searchCoursePipe = new SearchCoursePipe();
+  }
 
   ngOnInit() {
+    this.searchText = this.coursesSearchService.searchText;
+    this.coursesArray = this.searchCoursePipe.transform(this.coursesListService.getList(), this.searchText);
   }
 
   deleteCourse(id: number) {
-    console.log(id);
+    console.log(id, 'delete');
+    this.coursesListService.removeCourse(id);
+    this.coursesArray = this.coursesListService.getList();
   }
 
 }
