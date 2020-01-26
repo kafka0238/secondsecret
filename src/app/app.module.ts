@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { CoursesPageModule } from './components/courses-page/courses-page.module';
 import { PipesModule } from './pipes/pipes.module';
 import { LoginPageModule } from './components/login-page/login-page.module';
+import {DirectivesModule} from './directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginPageModule } from './components/login-page/login-page.module';
     FormsModule,
     CoursesPageModule,
     LoginPageModule,
-    PipesModule
+    PipesModule,
+    DirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

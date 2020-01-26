@@ -1,11 +1,11 @@
 import { ChangeBorderDirective } from './change-border.directive';
 import {TestBed} from '@angular/core/testing';
-import {CoursesListComponent} from './courses-list.component';
+import {CoursesListComponent} from '../components/courses-page/courses-list/courses-list.component';
 import {By} from '@angular/platform-browser';
-import {CoursesElementComponent} from './courses-element/courses-element.component';
+import {CoursesElementComponent} from '../components/courses-page/courses-list/courses-element/courses-element.component';
 import {DebugElement} from '@angular/core';
-import {PipesModule} from '../../../pipes/pipes.module';
-import {UtilModule} from '../../util/util.module';
+import {PipesModule} from '../pipes/pipes.module';
+import {UtilModule} from '../components/util/util.module';
 
 describe('ChangeBorderDirective', () => {
 

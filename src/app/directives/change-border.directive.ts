@@ -1,5 +1,5 @@
 import {Directive, ElementRef, Input, OnInit} from '@angular/core';
-import { Course } from '../../util/course';
+import { Course } from '../components/util/course';
 
 @Directive({
   selector: '[appChangeBorder]'

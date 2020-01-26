@@ -7,9 +7,8 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CoursesElementComponent } from './courses-list/courses-element/courses-element.component';
 import { UtilModule } from '../util/util.module';
 import { FormsModule } from '@angular/forms';
-import { ChangeBorderDirective } from './courses-list/change-border.directive';
 import { PipesModule } from '../../pipes/pipes.module';
-import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
+import { DirectivesModule } from '../../directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -17,21 +16,18 @@ import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
     SearchComponent,
     CoursesPageComponent,
     CoursesListComponent,
-    CoursesElementComponent,
-    ChangeBorderDirective,
-    BreadcrumbsComponent
+    CoursesElementComponent
   ],
   providers: [
-    ChangeBorderDirective
   ],
   imports: [
     CommonModule,
     UtilModule,
     FormsModule,
-    PipesModule
+    PipesModule,
+    DirectivesModule
   ],
   exports: [
-    ChangeBorderDirective
   ]
 })
 export class CoursesPageModule { }

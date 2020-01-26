@@ -1,16 +1,16 @@
 <div class="container">
   <h3 class="container__title">Login</h3>
-    <form class="form-auth" (submit)="login()">
-      <label class="form-auth__label" for="user-login">E-mail:</label>
-      <input type="text" id="user-login" class="form-auth__input" name="user-login" autocomplete="off" #uLogin="ngModel"
-             [(ngModel)]="user.login" placeholder="Enter email" required autofocus>
-      <label class="form-auth__label" for="user-password">Password:</label>
-      <input type="password" id="user-password" class="form-auth__input" name="user-password" autocomplete="off" #uPassword="ngModel"
-             [(ngModel)]="user.password" placeholder="Enter password" title="Please enter the password" required>
-      <div class="form-auth__action-section">
-        <a class="action-section__forgot-password" [routerLink]="['/forgot-password']">Forgot password?</a>
-        <button class="action-section__button-auth" type="submit"
-                [disabled]="uLogin?.errors?.required || uPassword?.errors?.required">Login</button>
-      </div>
-    </form>
+  <form class="form-auth" (submit)="login()">
+    <label class="form-auth__label" for="user-login">E-mail:</label>
+    <input type="text" id="user-login" class="form-auth__input" name="user-login" autocomplete="off" #uLogin="ngModel"
+           [(ngModel)]="user.login" placeholder="Enter email" required autofocus>
+    <label class="form-auth__label" for="user-password">Password:</label>
+    <input type="password" id="user-password" class="form-auth__input" name="user-password" autocomplete="off" #uPassword="ngModel"
+           [(ngModel)]="user.password" placeholder="Enter password" title="Please enter the password" required>
+    <div class="form-auth__action-section">
+      <a class="action-section__forgot-password" [routerLink]="['/forgot-password']">Forgot password?</a>
+      <button class="action-section__button-auth" type="submit"
+              [disabled]="uLogin?.errors?.required || uPassword?.errors?.required">Login</button>
+    </div>
+  </form>
 </div>
