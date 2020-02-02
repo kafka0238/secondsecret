@@ -12,7 +12,8 @@ import { CoursesPageModule } from './components/courses-page/courses-page.module
 import { CoursePageModule } from './components/course-page/course-page.module';
 import { PipesModule } from './pipes/pipes.module';
 import { LoginPageModule } from './components/login-page/login-page.module';
-import {DirectivesModule} from './directives/directives.module';
+import { NotFoundPageModule } from './components/not-found-page/not-found-page.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {DirectivesModule} from './directives/directives.module';
     CoursesPageModule,
     CoursePageModule,
     LoginPageModule,
+    NotFoundPageModule,
     PipesModule,
     DirectivesModule
   ],

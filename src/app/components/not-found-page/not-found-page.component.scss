@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  background: #f2f3f7;
+
+  .big-text-size {
+    font-size: 30px;
+    margin: 0;
+  }
+}
