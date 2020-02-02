@@ -19,6 +19,7 @@ export class AuthService {
   logout() {
     console.log('func logout in service');
     localStorage.removeItem('auth');
+    this.router.navigate(['/login']);
   }
 
   isAuthenticade(): boolean {
