@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CoursesPageModule } from './components/courses-page/courses-page.module';
+import { CoursePageModule } from './components/course-page/course-page.module';
 import { PipesModule } from './pipes/pipes.module';
 import { LoginPageModule } from './components/login-page/login-page.module';
 import {DirectivesModule} from './directives/directives.module';
@@ -26,6 +27,7 @@ import {DirectivesModule} from './directives/directives.module';
     AppRoutingModule,
     FormsModule,
     CoursesPageModule,
+    CoursePageModule,
     LoginPageModule,
     PipesModule,
     DirectivesModule

@@ -1,3 +1,27 @@
-<p>
-  course-page works!
-</p>
+<div class="container">
+  <h3 class="container__title">Add course</h3>
+  <form class="form-course">
+    <label class="form-course__label" for="title">Title:</label>
+    <input type="text" id="title" class="form-course__input" name="title" autocomplete="off" #cTitle="ngModel"
+           [(ngModel)]="course.title" placeholder="Enter title" required autofocus>
+    <label class="form-course__label" for="description">Description:</label>
+    <textarea type="text" id="description" class="form-course__input" name="title" autocomplete="off" #cDescription="ngModel"
+              [(ngModel)]="course.description" placeholder="Enter description" required>
+    </textarea>
+    <label class="form-course__label" for="date">Date:</label>
+    <input type="text" id="date" class="form-course__input" name="date" autocomplete="off" #cDate="ngModel"
+           [(ngModel)]="course.creationDate" placeholder="Enter date" required>
+    <label class="form-course__label" for="duration">Duration:</label>
+    <input type="text" id="duration" class="form-course__input" name="duration" autocomplete="off" #cDuration="ngModel"
+           [(ngModel)]="course.durationMin" placeholder="Enter duration" required>
+    <label class="form-course__label" for="authors">Authors:</label>
+    <input type="text" id="authors" class="form-course__input" name="authors" autocomplete="off" #cAuthors="ngModel"
+           [(ngModel)]="course.authors" placeholder="Enter authors" required>
+    <div class="form-course__action-section">
+      <button class="action-section__button-save" type="submit"
+              [disabled]="cTitle?.errors?.required || cDescription?.errors?.required || cDate?.errors?.required || cDuration?.errors?.required || cAuthors?.errors?.required">Save</button>
+      <button class="action-section__button-cancel" type="submit"
+              [disabled]="cTitle?.errors?.required || cDescription?.errors?.required || cDate?.errors?.required || cDuration?.errors?.required || cAuthors?.errors?.required">Cancel</button>
+    </div>
+  </form>
+</div>
