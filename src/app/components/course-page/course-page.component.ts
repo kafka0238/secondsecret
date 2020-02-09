@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Course} from '../util/course';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-page',
@@ -15,10 +15,22 @@ export class CoursePageComponent implements OnInit {
     durationMin: '',
     authors: ''
   };
+  isNew = true;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  formSubmit() {
+    if (this.isNew) {
+      console.log('new course');
+      this.router.navigate(['/courses']);
+    } else {
+      console.log('edit course');
+      this.router.navigate(['/courses']);
+    }
+  }
 }

@@ -9,6 +9,7 @@ import { UtilModule } from '../util/util.module';
 import { FormsModule } from '@angular/forms';
 import { PipesModule } from '../../pipes/pipes.module';
 import { DirectivesModule } from '../../directives/directives.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DirectivesModule } from '../../directives/directives.module';
     UtilModule,
     FormsModule,
     PipesModule,
-    DirectivesModule
+    DirectivesModule,
+    RouterModule
   ],
   exports: [
   ]

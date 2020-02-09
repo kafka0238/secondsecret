@@ -14,6 +14,7 @@ import { PipesModule } from './pipes/pipes.module';
 import { LoginPageModule } from './components/login-page/login-page.module';
 import { NotFoundPageModule } from './components/not-found-page/not-found-page.module';
 import { DirectivesModule } from './directives/directives.module';
+import { UtilModule } from './components/util/util.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DirectivesModule } from './directives/directives.module';
     LoginPageModule,
     NotFoundPageModule,
     PipesModule,
-    DirectivesModule
+    DirectivesModule,
+    UtilModule
   ],
   providers: [],
   bootstrap: [AppComponent]
