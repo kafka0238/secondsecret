@@ -8,7 +8,7 @@ export class SearchCoursePipe implements PipeTransform {
 
   transform(value: Course[], args?: string): Course[] {
     if (args !== undefined && args !== '') {
-      return value.filter(hero => hero.title === args);
+      return value.filter(course => course.title === args);
     } else {
       return value;
     }
