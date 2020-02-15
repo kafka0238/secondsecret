@@ -5,6 +5,7 @@ import { CoursesPageComponent } from './components/courses-page/courses-page.com
 import { CoursePageComponent } from './components/course-page/course-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { CoursesListComponent } from './components/courses-page/courses-list/courses-list.component';
 
 const appRoutes: Routes = [
   {
@@ -17,21 +18,30 @@ const appRoutes: Routes = [
     component: CoursesPageComponent,
     data: {
       breadcrumb: 'Courses'
-    }
-  },
-  {
-    path: 'courses/new',
-    component: CoursePageComponent,
-    data: {
-      breadcrumb: 'New'
-    }
-  },
-  {
-    path: 'courses/:id',
-    component: CoursePageComponent,
-    data: {
-      breadcrumb: 'Edit'
-    }
+    },
+    children: [
+      {
+        path: '',
+        component: CoursesListComponent,
+        data: {
+          breadcrumb: 'Final'
+        }
+      },
+      {
+        path: 'new',
+        component: CoursePageComponent,
+        data: {
+          breadcrumb: 'New'
+        }
+      },
+      {
+        path: ':id',
+        component: CoursePageComponent,
+        data: {
+          breadcrumb: 'Edit'
+        }
+      }
+    ]
   },
   {
     path: 'login',

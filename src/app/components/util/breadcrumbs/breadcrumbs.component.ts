@@ -16,6 +16,7 @@ interface IBreadcrumb {
 export class BreadcrumbsComponent implements OnInit {
 
   breadcrumbs: IBreadcrumb[];
+  lastBreadCrumbs: IBreadcrumb;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -24,8 +25,6 @@ export class BreadcrumbsComponent implements OnInit {
 
   ngOnInit() {
     const ROUTE_DATA_BREADCRUMB = 'breadcrumb';
-    console.log(this.activatedRoute, 'test');
-    console.log(this.activatedRoute.root, 'root');
 
     this.router.events.pipe(
       filter((event: RouterEvent): event is NavigationEnd => event instanceof NavigationEnd)
@@ -33,7 +32,7 @@ export class BreadcrumbsComponent implements OnInit {
       // set breadcrumbs
       const root: ActivatedRoute = this.activatedRoute.root;
       this.breadcrumbs = this.getBreadcrumbs(root);
-      console.log(this.breadcrumbs);
+      this.lastBreadCrumbs = this.breadcrumbs.pop();
     });
   }
 
@@ -42,7 +41,6 @@ export class BreadcrumbsComponent implements OnInit {
 
     // get the child routes
     const children: ActivatedRoute[] = route.children;
-
     // return if there are no more children
     if (children.length === 0) {
       return breadcrumbs;
@@ -53,6 +51,9 @@ export class BreadcrumbsComponent implements OnInit {
       // verify primary route
       if (child.outlet !== PRIMARY_OUTLET) {
         continue;
+      }
+      if (child.snapshot.data[ROUTE_DATA_BREADCRUMB] === 'Final') {
+        return breadcrumbs;
       }
 
       // verify the custom data property "breadcrumb" is specified on the route

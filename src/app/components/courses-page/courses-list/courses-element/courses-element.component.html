@@ -9,6 +9,6 @@
   {{course?.description}}
 </div>
 <div class="course-buttons">
-  <app-button [routerLink]="['/hero', course?.id]" [type]="'edit'" [text]="'Edit'"></app-button>
+  <app-button [routerLink]="['/courses', course?.id]" [type]="'edit'" [text]="'Edit'"></app-button>
   <app-button (click)="deleteCourse(course?.id)" [type]="'remove'" [text]="'Delete'"></app-button>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import {CoursesSearchService} from '../../courses-search.service';
+import {CoursesSearchService} from '../../../courses-search.service';
 
 @Component({
   selector: 'app-search',
