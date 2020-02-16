@@ -9,12 +9,14 @@ import { AuthService } from '../../../services/auth/auth.service';
 export class UserComponent implements OnInit {
 
   isLogin = true;
+  userName: string;
 
   constructor(
     private authService: AuthService
   ) { }
 
   ngOnInit() {
+    this.userName = this.authService.getUserInfo();
   }
 
   logout() {

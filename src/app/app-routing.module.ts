@@ -6,6 +6,7 @@ import { CoursePageComponent } from './components/course-page/course-page.compon
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { CoursesListComponent } from './components/courses-page/courses-list/courses-list.component';
+import { AuthGuard } from './services/auth/auth.guard';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
   {
     path: 'courses',
     component: CoursesPageComponent,
+    canActivate: [AuthGuard],
     data: {
       breadcrumb: 'Courses'
     },
@@ -45,10 +47,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'login',
-    component: LoginPageComponent,
-    data: {
-      breadcrumb: false
-    }
+    component: LoginPageComponent
   },
   {
     path: '**',
