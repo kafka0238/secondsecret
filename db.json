@@ -1,0 +1,16 @@
+{
+  "users": [
+    { "id": 1, "login": "admin", "password": "admin" },
+    { "id": 2, "login": "user1", "password": "user1" },
+    { "id": 3, "login": "user2", "password": "user2" },
+    { "id": 4, "login": "user3", "password": "user3" }
+  ],
+  "courses": [
+    { "id": 1,"title": "Video courses title 1","creationDate": "2020-01-30T21: 00: 00.000Z","durationMin": 90,"description": "lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description ","topRated": true },
+    { "id": 2,"title": "Video courses title 2","creationDate": "2020-01-03T21: 00: 00.000Z","durationMin": 10,"description": "lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description ","topRated": false },
+    { "id": 3,"title": "Video courses title 3","creationDate": "2019-12-10T21: 00: 00.000Z","durationMin": 60,"description": "lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description ","topRated": false },
+    { "id": 4,"title": "Video courses title 4","creationDate": "2020-01-30T21: 00: 00.000Z","durationMin": 45,"description": "lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description ","topRated": true },
+    { "id": 5,"title": "Video courses title 5","creationDate": "2020-01-30T21: 00: 00.000Z","durationMin": 120,"description": "lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description ","topRated": false },
+    { "id": 6,"title": "Video courses title 6","creationDate": "2020-01-30T21: 00: 00.000Z","durationMin": 100,"description": "lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description ","topRated": true }
+  ]
+}
